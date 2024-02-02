@@ -6,7 +6,7 @@ import CTA from "@components/CTA.astro";
 <BaseLayout
   title="About"
   description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  preloadImg={"https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -17,16 +17,16 @@ import CTA from "@components/CTA.astro";
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/cabinets2-m.jpg"
+        srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
       />
       <source
         media="(min-width: 601px)"
-        srcset="/assets/images/cabinets2.jpg"
+        srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
       />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/cabinets2.jpg"
+        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
         alt="kitchen cabinets"
         loading="eager"
         width="2500"
@@ -85,25 +85,18 @@ import CTA from "@components/CTA.astro";
       <!-- Right Content Section-->
       <div class="cs-right">
         <span class="cs-topper">About Us</span>
-        <h2 class="cs-title">About Company Title</h2>
+        <h2 class="cs-title" style="">About Velocity Web Studio</h2>
         <p class="cs-text">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
+          We are on a mission to help lower the barrier of entry for local businesses to have a thriving online presence for their business. That is why we offer a no upfront cost approach to helping businesses like yours manage their website.
         </p>
         <p class="cs-text">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-          officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-          et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-          nonatourean olei aptent taciti sociosqu ad litora torquent per.
+          In a sea of options available online today, we stive to stand out as not just another web studio that leaves custmers high and dry once a project is complete, we are your digital partner for the life of your business. We hope you can always rely on us to maintain an outstanding web presenc for your business, and offer bet in class support when you need it most.
         </p>
         <div class="cs-flex-group">
           <p class="cs-flex-p">
-            In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
-            consequat tincidunt turpis sit amet imperdiet for mind.
+            Reach new heights, at blistering speeds with us as your digital partner. We are here to serve the needs of your business.
           </p>
-          <span class="cs-name">Justin Time</span>
+          <span class="cs-name">Richard Prins</span>
           <span class="cs-job">CEO-Founder</span>
           <img
             class="cs-quote-icon"
@@ -115,7 +108,7 @@ import CTA from "@components/CTA.astro";
             height="77"
           />
         </div>
-        <a href="/projects" class="cs-button-solid">Our Projects</a>
+        <a href="/portfolio" class="cs-button-solid">See Our Work</a>
       </div>
     </div>
   </section>

@@ -5,19 +5,19 @@
   },
   {
     "key": "About Us",
-    "url": "/about/"
+    "url": "/about"
   },
   {
-    "key": "Projects",
-    "url": "/projects/"
+    "key": "Portfolio",
+    "url": "/portfolio"
   },
   {
     "key": "Reviews",
-    "url": "/reviews/"
+    "url": "/reviews"
   },
   {
     "key": "Blog",
-    "url": "/blog/",
+    "url": "/blog",
     "children": []
   }
 ]

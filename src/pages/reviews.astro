@@ -4,9 +4,9 @@ import CTA from "@components/CTA.astro";
 ---
 
 <BaseLayout
-  title="Reviews"
-  description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  title="Customer Reviews - Velocity Web Studio"
+  description="Our customers are our life blood. See what great things they have to say about our services, and how we can hell your busines, too!"
+  preloadImg={"https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -17,13 +17,13 @@ import CTA from "@components/CTA.astro";
     <picture class="cs-picture">
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/landing-m.webp"
+        srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
       />
-      <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg" />
+      <source media="(min-width: 601px)" srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg" />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/landing.jpg"
+        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
         alt="new home"
         width="2500"
         height="1667"
@@ -44,19 +44,17 @@ import CTA from "@components/CTA.astro";
             class="profile"
             loading="lazy"
             decoding="async"
-            src="/assets/svgs/profile.svg"
+            src="https://res.cloudinary.com/dpoanqywm/image/upload/v1701828898/john-derry_o4s1rb.webp"
             alt=""
             width="99"
             height="99"
           />
         </picture>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-          recusandae rerum unde similique ratione sapiente necessitatibus natus
-          mollitia nam iusto.
+          Velocity Web Studio was recommended to us to build a new website for Serenity Vista. They proposed a project plan with schedule of payments, and delivered as promised. They are professional, responsive, trustworthy and can be counted on to do quality work.
         </p>
         <div class="star-group">
-          <span class="name">B Miller<span class="desc">Homeowner</span></span>
+          <span class="name">John D.<span class="desc">Serenity Vista</span></span>
           <picture>
             <img
               aria-hidden="true"
@@ -76,19 +74,17 @@ import CTA from "@components/CTA.astro";
             class="profile"
             loading="lazy"
             decoding="async"
-            src="/assets/svgs/profile.svg"
+            src="https://res.cloudinary.com/dpoanqywm/image/upload/v1701828904/user-images_DAVID_MARGOLIN_PIC_x8wdvj.webp"
             alt=""
             width="99"
             height="99"
           />
         </picture>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-          recusandae rerum unde similique ratione sapiente necessitatibus natus
-          mollitia nam iusto.
+          Velocity Web Studio has been great to work with over the past couple years. They are quick to respond to my (frequent) questions/requests and their work always meets expectations. They were always able to bounce ideas off of and discuss and debate solutions to any problem we faced.
         </p>
         <div class="star-group">
-          <span class="name">Vincent M.<span class="desc">Homeowner</span></span
+          <span class="name">David M.<span class="desc">Knowledge Exchange</span></span
           >
           <picture>
             <img
@@ -116,12 +112,10 @@ import CTA from "@components/CTA.astro";
           />
         </picture>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-          recusandae rerum unde similique ratione sapiente necessitatibus natus
-          mollitia nam iusto.
+          Working with Velocity Web Studio has been refreshing!  Most recently and after moving our platform onto a new technology, we had a feature on our website that hasn’t worked in some time which was very embarrassing and wasn’t built by him, but regardless he dug into the issue and within a couple of hours had it figured out and working once again.
         </p>
         <div class="star-group">
-          <span class="name">Alex L.<span class="desc">Homeowner</span></span>
+          <span class="name">Brett C.<span class="desc">Dental Temp Staffing Solutions</span></span>
           <picture>
             <img
               aria-hidden="true"
@@ -135,7 +129,7 @@ import CTA from "@components/CTA.astro";
           </picture>
         </div>
       </div>
-      <div class="review">
+      <!-- <div class="review">
         <picture>
           <img
             class="profile"
@@ -232,7 +226,7 @@ import CTA from "@components/CTA.astro";
             />
           </picture>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <CTA />

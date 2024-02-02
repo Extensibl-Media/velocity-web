@@ -46,7 +46,7 @@ const {description, title, preloadImg = ""} = Astro.props;
     
             <!-- Sitewide Scripts -->
             <script defer src="/assets/js/nav.js"></script>
-            <script defer src="/assets/js/dark.js"></script>
+            <!-- <script defer src="/assets/js/dark.js"></script> -->
    
             {Astro.url.pathname === "/" &&
             <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -98,3 +98,5 @@ const {description, title, preloadImg = ""} = Astro.props;
     
         </body>
 </html>
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="3ad9f6ac-3ebd-4376-a932-ec982c935810";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>

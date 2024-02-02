@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro";
 import client from "@data/client.json";
+// const img = await import("../assets/images/cabinets2.jpg")
 ---
 
 <BaseLayout
-  title="Contact"
-  description="Meta description for the page"
-  preloadImg={import("../assets/images/cabinets2.jpg")}
+  title="Contact Us"
+  description="Get in touch with us!"
+  preloadImg={"https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"}
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -17,16 +18,16 @@ import client from "@data/client.json";
     <picture>
       <source
         media="(max-width: 600px)"
-        srcset="/assets/images/cabinets2-m.jpg"
+        srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
       />
       <source
         media="(min-width: 601px)"
-        srcset="/assets/images/cabinets2.jpg"
+        srcset="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
       />
       <img
         aria-hidden="true"
         decoding="async"
-        src="/assets/images/cabinets2.jpg"
+        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Web_Development_Tranmautritam_1_iycisb.jpg"
         alt="kitchen cabinets"
         loading="eager"
         width="2500"
@@ -46,9 +47,7 @@ import client from "@data/client.json";
           <span class="cs-topper">Contact</span>
           <h2 class="cs-title">Get in Touch</h2>
           <p class="cs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
-            ultrices odio pulvinar. Sed ut.
+            If you have a question that we can help answer, or would like to discuss some other opportunities with us, please feel free to reach out, we would be happy to chat!
           </p>
         </div>
         <label>
@@ -65,7 +64,7 @@ import client from "@data/client.json";
           Email
           <input
             required
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="Email"
@@ -110,15 +109,11 @@ import client from "@data/client.json";
           >{client.phoneFormatted}</a
         >
         <!--Address-->
-        <span class="cs-header">Address</span>
+        <span class="cs-header">Location</span>
         <a class="cs-link" href={client.address.mapLink}>
-          {client.address.lineOne},
-          <br />
-          {client.address.lineTwo},
-          <br />
           <span class="cs-block">
-            {client.address.city}
-            {client.address.state}
+            {client.address.city}{" "}
+            {client.address.state}{", "}
             {client.address.zip}
           </span>
         </a>
@@ -165,7 +160,7 @@ import client from "@data/client.json";
     }
 
     #cs-contact {
-      font-family: "Roboto", "Arial", sans-serif;
+      font-family: "Geist", "Arial", sans-serif;
       padding: var(--sectionPadding);
 
       .cs-container {
