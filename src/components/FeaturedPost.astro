@@ -9,13 +9,15 @@ const featuredPosts = posts.filter((post) =>
 );
 ---
 
-<!-- ============================================ --><!--                Featured Posts                --><!-- ============================================ -->
+<!-- ============================================ -->
+<!--                Featured Posts                -->
+<!-- ============================================ -->
 <div class="blog-sidebar">
   <!--Featured-->
   <div class="blog-featured-group">
     <span class="blog-header">Featured Posts</span>
     {
-      featuredPosts.map((post) => (
+      featuredPosts.map((post, index) => (
         <a class="blog-feature" href={post.slug}>
           <picture class="blog-featureImage">
             <img
