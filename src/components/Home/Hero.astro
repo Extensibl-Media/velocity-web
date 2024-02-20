@@ -1,0 +1,264 @@
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-143">
+    <div class="cs-container">
+        <span class="cs-topper">Let your business stand out</span>
+        <h1 class="cs-title">Affordable Web Design for Small Business</h1>
+        <p class="cs-text" style="text-wrap: pretty">
+            Propel your growth with a high converting website for your business
+            for no upfront cost with our affordable lifetime website support
+            services
+        </p>
+        <a href="#book-a-call" class="cs-button-solid">Book A Call Today</a>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source
+            media="(max-width: 600px)"
+            srcset="
+                https://res.cloudinary.com/dpoanqywm/image/upload/v1705554228/Business_Owner_Energepiccom_313690_1_m8zxek.jpg
+            "
+        />
+        <source
+            media="(min-width: 601px)"
+            srcset="
+                https://res.cloudinary.com/dpoanqywm/image/upload/v1705554228/Business_Owner_Energepiccom_313690_i9eo5y.jpg
+            "
+        />
+        <img
+            loading="lazy"
+            decoding="async"
+            src="https://res.cloudinary.com/dpoanqywm/image/upload/v1705554228/Business_Owner_Energepiccom_313690_i9eo5y.jpg"
+            alt="kitchen"
+            width="2250"
+            height="1500"
+            aria-hidden="true"
+        />
+    </picture>
+</section>
+
+<style lang="less">
+    /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #hero-143 {
+            /* Centers button */
+            text-align: center;
+            /* 144px - 300px - leaving extra space for the navigation */
+            padding: clamp(9rem, 25.95vw, 12.75rem) (16/16rem) 0;
+            /* 130px - 450px */
+            padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+            position: relative;
+            z-index: 1;
+            /* Prevents white rectangle pseudos from overlapping the sections below */
+            overflow: hidden;
+
+            &:before {
+                /* Left side of the triangle */
+                content: "";
+                width: (500/16rem);
+                /* make really long so it covers the whole screen all the way to desktop */
+                height: (4000/16rem);
+                background: #fff;
+                opacity: 1;
+                transform: rotate(-67deg);
+                transform-origin: center;
+                position: absolute;
+                display: block;
+                bottom: (-2235/16rem);
+                /* this makes the right edge sit at the 50% line at all times */
+                right: 50%;
+                z-index: 0;
+            }
+
+            &:after {
+                /* Right side of the triangle */
+                content: "";
+                width: (500/16rem);
+                height: (4000/16rem);
+                background: #fff;
+                opacity: 1;
+                transform: rotate(67deg);
+                transform-origin: center;
+                position: absolute;
+                display: block;
+                bottom: (-2235/16rem);
+                /* this makes the left edge sit at the 50% line at all times */
+                left: 50%;
+                z-index: 0;
+            }
+
+            .cs-background {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+
+                &:before {
+                    /* Overlay */
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    opacity: 0.7;
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    /* prevents the cursor from interacting with it */
+                    pointer-events: none;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .cs-container {
+                width: 100%;
+                max-width: (1280/16rem);
+                margin: auto;
+            }
+
+            .cs-topper {
+                text-align: center;
+                margin-bottom: (15/16rem);
+                color: #fff;
+            }
+
+            .cs-title {
+                /* 39px - 61px */
+                font-size: clamp(2.4375rem, 6.4vw, 4.5rem);
+                font-weight: 700;
+                line-height: 1.2em;
+                text-align: center;
+                max-width: (829/16rem);
+                /* 16px - 24px */
+                margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+                color: #fff;
+                position: relative;
+                text-wrap: balance;
+
+                &:after {
+                    /* Divider Line */
+                    content: "";
+                    /* 60px - 100px */
+                    width: clamp(3.75rem, 9.5vw, 6.25rem);
+                    /* 4px - 8px */
+                    height: clamp(0.25rem, 0.8vw, 0.5rem);
+                    /* 16px - 24px */
+                    margin: clamp(1rem, 4vw, 1.5rem) auto
+                        clamp(1rem, 4vw, 1.5rem);
+                    background: var(--primary);
+                    opacity: 1;
+                    position: relative;
+                    display: block;
+                }
+            }
+
+            .cs-text {
+                /* 16px - 25px */
+                font-size: clamp(1rem, 1.95vw, 1.5625rem);
+                line-height: 1.5em;
+                text-align: center;
+                width: 100%;
+                /* 464px - 800px */
+                max-width: clamp(29rem, 60vw, 50rem);
+                margin: 0 auto;
+                /* 40px - 48px */
+                margin-bottom: clamp(2.5rem, 4vw, 3rem);
+                color: #fff;
+            }
+
+            .cs-button-solid {
+                font-size: (16/16rem);
+                /* 46px - 56px */
+                line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+                text-decoration: none;
+                font-weight: 700;
+                margin: auto;
+                color: #fff;
+                min-width: (150/16rem);
+                padding: 0 (24/16rem);
+                background-color: var(--primary);
+                border-radius: 0.25rem;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                transition: color 0.3s;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 0%;
+                    background: #000;
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    border-radius: (4/16rem);
+                    transition: width 0.3s;
+                }
+
+                &:hover {
+                    color: #fff;
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Desktop - 1300px (To make image background parallax) */
+    @media only screen and (min-width: 81.25rem) {
+        #hero-143 {
+            background: url("https://res.cloudinary.com/dpoanqywm/image/upload/v1705554228/Business_Owner_Energepiccom_313690_i9eo5y.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* makes the parallax effect */
+            background-attachment: fixed;
+
+            .cs-background {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+        body.dark-mode {
+            #hero-143 {
+                &:before,
+                &:after {
+                    background: var(--dark);
+                }
+
+                .cs-background {
+                    &:before {
+                        opacity: 0.85;
+                    }
+                }
+            }
+        }
+    }
+</style>
