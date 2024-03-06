@@ -268,7 +268,7 @@ Below the front matter is the page content. Any code that should be sent to a la
 </BaseLayout>
 ```
 
-This code will be inserted into the `<slot />` component in BaseLayout.astro.
+This code will be inserted into the astro `<slot />` component in BaseLayout.astro.
 
 <a name="configuringTheCms"></a>
 
