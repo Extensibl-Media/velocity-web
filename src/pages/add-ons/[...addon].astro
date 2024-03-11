@@ -13,8 +13,6 @@ export const getStaticPaths = async () => {
 
 const { addon } = Astro.props;
 const { title, description, image } = addon.data;
-console.log(addon);
-
 const { Content } = await addon.render();
 ---
 
