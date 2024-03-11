@@ -1,226 +1,103 @@
 ---
+import { getCollection } from "astro:content";
+const projects = await getCollection("portfolio");
+const { full }: { full: boolean } = Astro.props;
+
+const preview = [...projects].slice(0, 4)
 ---
 
-<!-- ============================================ -->
-<!--                   Portfolio                    -->
-<!-- ============================================ -->
-
-<section id="portfolio">
+<section id="gallery-43">
     <div class="cs-container">
-        <span class="cs-topper">Our Amazing Customers</span>
-        <h2 class="cs-title" style="text-wrap: pretty">
-            Websites tailored to your business needs
-        </h2>
-        <div class="cs-image-group">
-            <!-- Row 1-->
-            <div class="cs-row cs-row-1">
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125652/Resize_Image_Tool_ovol6t.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_1_n3jost.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_1_n3jost.jpg"
-                        alt="Luke Mori Real Estate"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706649829/Resize_Image_Tool_4_czuyks.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_5_vzvcuh.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_5_vzvcuh.jpg"
-                        alt="Extensibl Media"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <!-- <picture class="cs-picture cs-picture3">
-            <source
-              media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port7-m.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port7.jpg"
-            />
-            <img
-              aria-hidden="true"
-              decoding="async"
-              src="/assets/images/portfolio/port7.jpg"
-              alt="building a new wall"
-              loading="lazy"
-              width="400"
-              height="560"
-            />
-          </picture> -->
-            </div>
-            <!-- Row 2 -->
-            <div class="cs-row cs-row-2">
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125652/Resize_Image_Tool_2_g9nk3k.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_peq7mo.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_peq7mo.jpg"
-                        alt="Serenity Vista"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706649829/Resize_Image_Tool_3_dbjdrh.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_6_lt26f3.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_6_lt26f3.jpg"
-                        alt="Big F*cking Stickers"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <!-- <picture class="cs-picture cs-picture3">
-            <source
-              media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port8-m.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port8.jpg"
-            />
-            <img
-              aria-hidden="true"
-              decoding="async"
-              src="/assets/images/portfolio/port8.jpg"
-              alt="kew kitchen cabinets"
-              loading="lazy"
-              width="400"
-              height="560"
-            />
-          </picture> -->
-            </div>
-            <!-- Row 3 -->
-            <div class="cs-row cs-row-3">
-                <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                <picture class="cs-picture cs-picture1">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125652/Resize_Image_Tool_1_lfzhjb.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_2_n7jeqy.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706125515/Untitled_design_840x1260_2_n7jeqy.jpg"
-                        alt="Knowledge Exchange"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706649829/Resize_Image_Tool_5_qm6lgb.jpg
-                        "
-                    />
-                    <source
-                        media="(min-width: 601px)"
-                        srcset="
-                            https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_3_nj3sts.jpg
-                        "
-                    />
-                    <img
-                        aria-hidden="true"
-                        decoding="async"
-                        src="https://res.cloudinary.com/dpoanqywm/image/upload/v1706643398/Untitled_design_840x1260_3_nj3sts.jpg"
-                        alt="Dental Temp Staffing Solutions"
-                        loading="lazy"
-                        width="400"
-                        height="560"
-                    />
-                </picture>
-                <!-- <picture class="cs-picture cs-picture3">
-            <source
-              media="(max-width: 600px)"
-              srcset="/assets/images/portfolio/port9-m.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="/assets/images/portfolio/port9.jpg"
-            />
-            <img
-              aria-hidden="true"
-              decoding="async"
-              src="/assets/images/portfolio/port9.jpg"
-              alt="kew kitchen cabinets"
-              loading="lazy"
-              width="400"
-              height="560"
-            />
-          </picture> -->
-            </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Work</span>
+            <h2 class="cs-title" style="text-wrap: balance;">
+                We Build Great Looking, Highly Effective Business
+                Websites. Let Us Build Yours!
+            </h2>
         </div>
-        <!-- <a href="/portfolio" class="cs-button-solid">See More Of Our Work</a> -->
+        <div class="cs-image-group">
+
+        {full ? projects.map(project => (
+        <a class="cs-item" href={`/case-studies/${project.slug}`}>
+            <picture class="cs-picture">
+                <source
+                    media="(max-width: 600px)"
+                    srcset={project.data.featuredImage}
+                />
+                <source
+                    media="(min-width: 601px)"
+                    srcset={project.data.featuredImage}
+                />
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src={project.data.featuredImage}
+                    alt={project.data.featuredImageAlt}
+                    width="346"
+                    height="346"
+                />
+            </picture>
+            <!-- Hover Box -->
+            <div class="cs-hover-box">
+                <picture class="cs-icon">
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/svgs/arrow-right.svg"
+                        alt="fancy house"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <h3 class="cs-h3">{project.data.title}</h3>
+                <p class="cs-hover-box-text">
+                   {project.data.description}
+                </p>
+            </div>
+        </a>
+        )) : preview.map(project => (
+        <a class="cs-item" href={`/case-studies/${project.slug}`}>
+        <picture class="cs-picture">
+            <source
+                media="(max-width: 600px)"
+                srcset={project.data.featuredImage}
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset={project.data.featuredImage}
+            />
+            <img
+                loading="lazy"
+                decoding="async"
+                src={project.data.featuredImage}
+                alt={project.data.featuredImageAlt}
+                width="346"
+                height="346"
+            />
+        </picture>
+            <!-- Hover Box -->
+            <div class="cs-hover-box">
+                <picture class="cs-icon">
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="/assets/svgs/arrow-right.svg"
+                        alt="fancy house"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <h3 class="cs-h3">{project.data.title}</h3>
+                <p class="cs-hover-box-text">
+                   {project.data.description}
+                </p>
+            </div>
+        </a>
+        ))}
+        </div>
+
     </div>
 </section>
 
@@ -229,126 +106,197 @@
 <---          Gallery           -->
 <--- -------------------------- -*/
 
-    /* Mobile - 360px - Contains hover animation */
-    @media only screen and (min-width: 0em) {
-        #portfolio {
-            /* Centers button */
-            text-align: center;
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #gallery-43 {
             padding: var(--sectionPadding);
             position: relative;
             /* Prevents overflow from the image going off screen */
             overflow: hidden;
+
             .cs-container {
                 width: 100%;
-                max-width: (1322/16em);
+                max-width: (1104/16rem);
                 margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* 48px - 64px */
+                gap: clamp(3rem, 6vw, 4rem);
             }
 
-            .cs-topper {
+            .cs-content {
+                /* set text align to left if content needs to be left aligned */
                 text-align: center;
-                margin-bottom: (16/16rem);
-            }
-
-            .cs-title {
-                text-align: center;
-                max-width: (621/16rem);
-                margin-bottom: (40/16rem);
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                /* centers content horizontally, set to flex-start to left align */
+                align-items: center;
             }
 
             .cs-image-group {
-                /* used rem so it doesn't scale with the font size of on parent */
-                font-size: ~"min(1.1vw, 1em)";
                 width: 100%;
-                max-width: (1322/16em);
-                margin: 0 auto (60/16rem);
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                gap: (30/16em);
-            }
-
-            .cs-row {
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
                 align-items: center;
-                gap: (30/16em);
+                /* 16px - 20px */
+                gap: clamp(1rem, 1.5vw, 1.25rem);
+            }
+
+            .cs-item {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1.5;
+                margin: 0;
+                position: relative;
+                display: block;
+
+                &:hover {
+                    .cs-hover-box {
+                        opacity: 1;
+                    }
+
+                    .cs-icon {
+                        /* return to original position */
+                        transform: rotateY(0);
+                    }
+
+                    .cs-h3 {
+                        opacity: 1;
+                        /* Return to original position */
+                        transform: translateY(0);
+                    }
+
+                    .cs-hover-box-text {
+                        opacity: 1;
+                        /* Return to original position */
+                        transform: translateY(0);
+                    }
+                }
             }
 
             .cs-picture {
+                margin: auto;
+                width: 100%;
+                height: 100%;
                 display: block;
                 position: relative;
+
                 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
                     position: absolute;
                     top: 0;
                     left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
 
-            .cs-row-1 {
-                .cs-picture1 {
-                    width: (420/16em);
-                    height: (567/16em);
-                }
+            .cs-hover-box {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: (16/16em);
+                background-color: fade(#10abc8, 90%);
+                opacity: 0;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                /* Prevents padding from contributing to height & width */
+                box-sizing: border-box;
+                /* Sets stage for 3d transform animation */
+                perspective: 700px;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                /* prevents mouse from being able to interact with these elements */
+                pointer-events: none;
+                transition: opacity 0.3s;
+            }
 
-                .cs-picture2 {
-                    width: (420/16em);
-                    height: (629/16em);
-                }
+            .cs-icon {
+                /* 50px - 60px */
+                width: clamp(3.125rem, 5vw, 3.75rem);
+                height: clamp(3.125rem, 5vw, 3.75rem);
+                /* 16px - 32px */
+                margin-bottom: clamp(1rem, 5vw, 2rem);
+                border-radius: 50%;
+                background-color: #fff;
+                outline: (8/16rem) solid fade(#fff, 70%);
+                /* Start with the icon box rotated 90deg */
+                transform: rotateY(90deg);
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                flex: none;
+                transition: transform 0.5s;
 
-                .cs-picture3 {
-                    width: (420/16em);
-                    height: (512/16em);
+                img {
+                    width: 2rem;
+                    height: 2rem;
                 }
             }
 
-            .cs-row-2 {
-                .cs-picture1 {
-                    width: (420/16em);
-                    height: (492/16em);
-                }
-
-                .cs-picture2 {
-                    width: (420/16em);
-                    height: (517/16em);
-                }
-
-                .cs-picture3 {
-                    width: (420/16em);
-                    height: (629/16em);
-                }
+            .cs-h3 {
+                /* 20px - 25px */
+                font-size: clamp(1.25rem, 2vw, 1.5625rem);
+                line-height: 1.2em;
+                font-weight: 700;
+                margin: 0 auto;
+                max-width: (270/16rem);
+                color: #fff;
+                /* make starting position down 10px and invisible */
+                opacity: 0;
+                transform: translateY(0.625rem);
+                margin-bottom: (8/16rem);
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s ease-out;
+                transition-delay: 0.1s;
             }
 
-            .cs-row-3 {
-                .cs-picture1 {
-                    width: (420/16em);
-                    height: (625/16em);
-                }
-
-                .cs-picture2 {
-                    width: (420/16em);
-                    height: (452/16em);
-                }
-
-                .cs-picture3 {
-                    width: (420/16em);
-                    height: (629/16em);
-                }
+            .cs-hover-box-text {
+                /* 13px - 16px */
+                font-size: clamp(0.8125rem, 1vw, 1rem);
+                line-height: 1.5em;
+                margin: 0 auto;
+                max-width: (270/16rem);
+                color: #fff;
+                /* make starting position down 10px and invisible */
+                opacity: 0;
+                transform: translateY(0.625rem);
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s ease-out;
+                transition-delay: 0.2s;
             }
         }
     }
 
-    /* Dark mode */
-    @media only screen and (min-width: 0em) {
-        body.dark-mode {
-            #portfolio {
-                .cs-title {
-                    color: var(--bodyTextColorWhite);
-                }
+    /* In Between - 600px */
+    @media only screen and (min-width: 37.5rem) {
+        #gallery-43 {
+            .cs-image-group {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+            }
+
+            .cs-item {
+                grid-column: span 6;
+            }
+        }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+        #gallery-43 {
+            .cs-item {
+                grid-column: span 6;
             }
         }
     }

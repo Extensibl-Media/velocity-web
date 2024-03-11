@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import "@styles/blog.less";
+
+export const getStaticPaths = async () => {
+    const addons = await getCollection("addons");
+    return addons.map((entry) => ({
+        params: { addon: entry.slug },
+        props: { addon: entry },
+    }));
+};
+
+const { addon } = Astro.props;
+const { title, description, image } = addon.data;
+console.log(addon);
+
+const { Content } = await addon.render();
+---
+
+<BaseLayout {title} {description}>
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                  Blog Article                -->
+            <!-- ============================================ -->
+
+            <article class="blog-article">
+                <!--Main Article Image-->
+                <picture class="blog-mainImage">
+                    <img
+                        src={image}
+                        alt="add-on image"
+                        width="795"
+                        height="400"
+                        decoding="async"
+                    />
+                </picture>
+
+                <!--Article Info-->
+                <div class="article-group">
+                    <h1 class="blog-h1">{title}</h1>
+                </div>
+                <section id="blog-content">
+                    <Content />
+                </section>
+            </article>
+        </div>
+    </div>
+</BaseLayout>

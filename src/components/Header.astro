@@ -2,14 +2,11 @@
 import navData from "@data/navData.json";
 ---
 
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
-
+<!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
-        <a href="" class="cs-logo" aria-label="back to home">
+        <a href="/" class="cs-logo" aria-label="back to home">
             <img
                 src="/assets/svgs/logo-black.svg"
                 alt="logo"
@@ -35,19 +32,9 @@ import navData from "@data/navData.json";
                     <li class="cs-li">
                         <a href="/" class="cs-li-link"> Home </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/#services" class="cs-li-link">Services</a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/portfolio" class="cs-li-link">Our Work</a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/reviews" class="cs-li-link">Reviews</a>
-                    </li>
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <!-- <li class="cs-li cs-dropdown" tabindex="0">
+                    <li class="cs-li cs-dropdown" tabindex="0">
                         <span class="cs-li-link">
-                            Weight Loss
+                            Services
                             <img
                                 class="cs-drop-icon"
                                 src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
@@ -60,39 +47,44 @@ import navData from "@data/navData.json";
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Semaglutide</a
+                                <a
+                                    href="/services/web-design"
+                                    class="cs-li-link cs-drop-link"
+                                    >Web Design</a
                                 >
                             </li>
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Tirezapetide</a
+                                <a
+                                    href="/services/website-maintenance"
+                                    class="cs-li-link cs-drop-link"
+                                    >Website Maintenance</a
                                 >
                             </li>
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Semaglutide</a
+                                <a
+                                    href="/services/seo-content"
+                                    class="cs-li-link cs-drop-link"
+                                    >SEO & Content</a
                                 >
                             </li>
                             <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Tirezapetide</a
-                                >
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Semaglutide</a
-                                >
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link"
-                                    >Tirezapetide</a
+                                <a
+                                    href="/services/marketing"
+                                    class="cs-li-link cs-drop-link">Marketing</a
                                 >
                             </li>
                         </ul>
-                    </li> -->
+                    </li>
                     <li class="cs-li">
-                        <a href="/#pricing" class="cs-li-link">Pricing</a>
+                        <a href="/portfolio" class="cs-li-link">Our Work</a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/reviews" class="cs-li-link">Reviews</a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+
+                    <li class="cs-li">
+                        <a href="/pricing" class="cs-li-link">Pricing</a>
                     </li>
                 </ul>
                 <!-- <a
@@ -102,9 +94,7 @@ import navData from "@data/navData.json";
                 > -->
             </div>
         </nav>
-        <a
-            href="/#book-a-call"
-            class="cs-button-solid cs-nav-button desktop-only"
+        <a href="/pricing" class="cs-button-solid cs-nav-button desktop-only"
             >Get Started</a
         >
     </div>

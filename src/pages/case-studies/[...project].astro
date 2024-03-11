@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import "@styles/blog.less";
+
+export const getStaticPaths = async () => {
+    const projects = await getCollection("portfolio");
+    return projects.map((entry) => ({
+        params: { project: entry.slug },
+        props: { project: entry },
+    }));
+};
+
+const { project } = Astro.props;
+const { title, description, featuredImage, featuredImageAlt, screenshot } =
+    project.data;
+const { Content } = await project.render();
+---
+
+<BaseLayout {title} {description}>
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                  Blog Article                -->
+            <!-- ============================================ -->
+
+            <article class="blog-article">
+                <!--Article Info-->
+                <div class="article-group">
+                    <h1 class="blog-h1">{title}</h1>
+                </div>
+                <section id="blog-content">
+                    <Content />
+                </section>
+            </article>
+        </div>
+        <img src={screenshot} style="max-width: 300px;" />
+    </div>
+</BaseLayout>
